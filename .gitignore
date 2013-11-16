@@ -12,8 +12,4 @@
 
 /*.project
 
-/build/classes/TestController/*.class
-
-/build/classes/TestJSONInUIAndServer/*.class
-
-/build/classes/TestJDBCTemplate
+/build/classes/
