@@ -11,3 +11,9 @@
 /WebContent/META-INF/*.MF
 
 /*.project
+
+/build/classes/TestController/*.class
+
+/build/classes/TestJSONInUIAndServer/*.class
+
+/build/classes/TestJDBCTemplate
