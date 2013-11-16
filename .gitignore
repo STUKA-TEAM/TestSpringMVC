@@ -1,0 +1,13 @@
+/.settings/*.jsdtscope
+
+/*.classpath
+
+/.settings/org.eclipse.jdt.core.prefs
+
+/.settings/org.eclipse.wst.common.component
+
+/.settings
+
+/WebContent/META-INF/*.MF
+
+/*.project
