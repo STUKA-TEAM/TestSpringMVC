@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<script type="application/javascript">
+function loadJson(){
+	var myObject = {
+			  test:'test 1',
+			  testData: [ 
+			    {testName: 'do',testId:''}
+			   ],
+			   testRcd:'value'   
+			};
+			var myString = JSON.stringify(myObject);  //converts json to string and prepends the POST variable name
+    alert(myString);
+}
+</script>
+<title>Convert to JSON</title>
+</head>
+<body>
+<button type="button" onclick="loadJson()">Update Details </button>
+</body>
+</html>
