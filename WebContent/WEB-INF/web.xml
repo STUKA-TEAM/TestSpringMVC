@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="WebApp_ID" version="2.5">
+    
+    <display-name>TestSpringMVC</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <!-- 
+   1.完全匹配：以“/”开头，以字母（非“*”）结束 
+                                如：<url-pattern>/test/list.do</url-pattern> 
+   2.目录匹配：以“/”开头且以“/*”结尾 
+                                如：<url-pattern>/test/*</url-pattern> 
+   <url-pattern>/*</url-pattern> 
+   3.扩展名匹配：以“*.”开头，以扩展名结束 
+                                如：<url-pattern>*.do</url-pattern> 
+   4.“/” 用来表明对应的Servlet为应用默认的Servlet。在这种情况下Servlet路径是请求的URI去掉上下文路径并且路径信息为null。 
+   
+   
+      匹配过程 
+      当一个请求发送到servlet容器的时候，容器先会将请求的url减去当前应用上下文的路径作为servlet的映射url，
+      比如我访问的是http://localhost/test/aaa.html，我的应用上下文是test，容器会将http://localhost/test去掉，
+      剩下的/aaa.html部分拿来做servlet的映射匹配。  容器会首先查找完全匹配，如果找不到，再查找目录匹配，如果也找不到，
+      就查找扩展名匹配。如果还没有找到一个servlet，器将尝试为请求的资源使用内容服务，如果应用定义了一个默认servlet，
+      则容器会将请求丢给默认servlet。 如果一个请求匹配多个“目录匹配”，容器会选择最长的匹配。如：servletA的url-pattern为/test/*，
+      而servletB的url-pattern为/test/a/*，此时访问http://localhost/test/a时，容器会选择路径最长的servlet来匹配，也就是这里的servletB。
+    -->
+    
+    
+     <servlet>
+        <servlet-name>TestController</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestController</servlet-name>
+        <url-pattern>/testcontroller/*</url-pattern>
+    </servlet-mapping>
+</web-app>
