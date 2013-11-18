@@ -1,8 +1,5 @@
 package TestJSONInUIAndServer;
 
-import java.util.Date;
-
-import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -11,31 +8,31 @@ import com.google.gson.annotations.SerializedName;
  *
  */
 public class Mail {
-    @SerializedName("Time")
-    private int timestamp;
+	@SerializedName("time")
+   private long timestamp;
+   private String mailContent;
     
-    public int getTimestamp()
+    public long getTimestamp()
     {
         return timestamp;
     }
     
-    public Mail(int timestamp)
+    public Mail(long timestamp)
     {
         this.timestamp = timestamp;
     }
-    
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int timestamp = (int)new Date().getTime() / 1000;
-		Mail mail = new Mail(timestamp);
-		        
-		Gson gson = new Gson();
-		String json = gson.toJson(mail);
-		
-		Mail mail2 = gson.fromJson(json, Mail.class);
-		
-		System.out.println(json);
-		System.out.println(mail2.getTimestamp());
+
+	public String getMailContent() {
+		return mailContent;
 	}
 
+	public void setMailContent(String mailContent) {
+		this.mailContent = mailContent;
+	}
+	
+    public Mail(long timestamp, String mailContent) {
+		super();
+		this.timestamp = timestamp;
+		this.mailContent = mailContent;
+	}
 }

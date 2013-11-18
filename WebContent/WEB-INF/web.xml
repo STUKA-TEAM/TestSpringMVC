@@ -43,4 +43,17 @@
         <servlet-name>TestController</servlet-name>
         <url-pattern>/testcontroller/*</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TestJSON</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestJSON</servlet-name>
+        <url-pattern>/testjson/*</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

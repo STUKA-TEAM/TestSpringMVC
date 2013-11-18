@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="application/javascript">
+$(function(){
+    $("#test").click(function(){
+			var myObject = {
+					  test:'test 1',
+					  testData: [ 
+					    {testName: 'do',testId:''}
+					   ],
+					   testRcd:'value'   
+					};
+			var myString = JSON.stringify(myObject);  //converts json to string and prepends the POST variable name
+			alert(myString);
+			sendJson(myString);
+		//	return false;  //prevents the page from reloading. this helps if you want to bind this whole process to a click event.
+	});
+});
+function sendJson(myString){
+ 	var request = $.ajax({
+		   type: "POST",
+		   url: "./testjson/jsonreceiver", 
+		   contentType: "application/json",
+		   data: myString,     //add the converted json string to a document.
+ 	});
+    request.done(function(msg) {
+	   alert( "Data Saved: " + msg );});
+    request.fail(function( jqXHR, textStatus ) {
+    	  alert( "Request failed: " + textStatus );
+    	});	  
+} 
+</script>
+<title>Convert to JSON</title>
+</head>
+<body>
+<button id="test">Update Details </button>
+</body>
+</html>
