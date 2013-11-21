@@ -12,7 +12,7 @@
       <property name="username" value="root"/>
       <property name="password" value="root"/>
    </bean>
-   
+  
 	<import resource="TestJDBCTemplate/TestJDBCTemplate-Beans.xml"/>
  
 </beans>

@@ -3,13 +3,17 @@ package TestJSONInUIAndServer;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class TestJson {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		ApplicationContext context = 
+				new ClassPathXmlApplicationContext("All-Modules.xml");
 		Date time = Calendar.getInstance().getTime();
 	    
 		Folder root = new Folder
