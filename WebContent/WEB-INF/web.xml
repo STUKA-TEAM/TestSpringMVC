@@ -81,6 +81,19 @@
         <servlet-name>TestFormValidate</servlet-name>
         <url-pattern>/testformvalidate/*</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TestAjaxRetrieve</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestAjaxRetrieve</servlet-name>
+        <url-pattern>/testajaxretrieve/*</url-pattern>
+    </servlet-mapping>
 
     
     <filter>

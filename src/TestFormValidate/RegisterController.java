@@ -31,13 +31,14 @@ public class RegisterController {
 	
 	//process the register
 	@RequestMapping(value = "register", method = RequestMethod.POST)
-	public String processRegister(@Valid NewRegister newRegister, BindingResult result,Model model){
+	public String processRegister(NewRegister newRegister, BindingResult result,Model model){
 		registerValidation.validate(newRegister, result);
 		model.addAttribute("newRegister", newRegister);
 		
 		if(result.hasErrors()){		
 			return "registerForm";
 		}else {
+			
 			return "registersuccess";
 		}
 	}
