@@ -61,4 +61,9 @@ public class Wizard {
 		status.setComplete();
 		return "finish";
 	}
+	@RequestMapping(value = "/cancel", method = RequestMethod.GET)
+	public String cancel(final SessionStatus status){
+		status.setComplete();
+		return "otherPage";
+	}
 }

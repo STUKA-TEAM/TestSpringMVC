@@ -65,6 +65,15 @@ function backStep(backStep){
 	  }
 	});
 	}
+function cancel(){
+	  $.ajax({
+	  type: "GET",
+	  url: "TestWizardProcess/wizard/cancel",
+	  success: function (data) {
+		  $("#stepContent").html(data);
+	  }
+	});
+	}
   </script>
  
 </body>
