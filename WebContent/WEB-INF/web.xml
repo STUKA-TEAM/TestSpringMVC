@@ -96,6 +96,19 @@
     </servlet-mapping>
 
     
+    <servlet>
+        <servlet-name>TestWizardProcess</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestWizardProcess</servlet-name>
+        <url-pattern>/TestWizardProcess/*</url-pattern>
+    </servlet-mapping>
+    
     <filter>
   <filter-name>characterEncodingFilter</filter-name>
   <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
