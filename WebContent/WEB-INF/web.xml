@@ -109,6 +109,19 @@
         <url-pattern>/TestWizardProcess/*</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>TestJspInclude</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestJspInclude</servlet-name>
+        <url-pattern>/TestJspInclude/*</url-pattern>
+    </servlet-mapping>
+    
     <filter>
   <filter-name>characterEncodingFilter</filter-name>
   <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
