@@ -122,7 +122,20 @@
         <url-pattern>/TestJspInclude/*</url-pattern>
     </servlet-mapping>
     
-    <filter>
+    <servlet>
+        <servlet-name>TestSpringInterceptor</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestSpringInterceptor</servlet-name>
+        <url-pattern>/TestSpringInterceptor/*</url-pattern>
+    </servlet-mapping>    
+    
+<filter>
   <filter-name>characterEncodingFilter</filter-name>
   <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
   <init-param>
