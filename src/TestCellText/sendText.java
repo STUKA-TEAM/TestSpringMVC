@@ -20,7 +20,7 @@ void sendCellText() throws HttpException, IOException{
 	PostMethod post = new PostMethod("http://utf8.sms.webchinese.cn"); 
 	post.addRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf8");//在头文件中设置转码
 	NameValuePair[] data ={ new NameValuePair("Uid", "tukacorp")
-	                       ,new NameValuePair("Key", "b52d3d68d04a344a6cf8")
+	                       ,new NameValuePair("Key", "")
 	                       ,new NameValuePair("smsMob","13818031305")
 	                       ,new NameValuePair("smsText",contentString)};
 	post.setRequestBody(data);
